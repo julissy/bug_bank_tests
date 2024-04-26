@@ -7,7 +7,7 @@ Este projeto consiste em um caso de estudo utilizando o site [Bug Bank](https://
 ### Clonar o projeto
 Para clonar o projeto para sua máquina local, utilize o seguinte comando:
 ```bash
-git clone https://github.com/seu-usuario/seu-projeto.git
+git clone https://github.com/julissy/bug_bank_tests.git
 ```
 
 ### Instalar o Python
