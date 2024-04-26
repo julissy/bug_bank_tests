@@ -25,6 +25,17 @@ Para instalar a biblioteca do Selenium para o Robot Framework, utilize o seguint
 pip install --upgrade robotframework-seleniumlibrary
 ```
 
+### Baixar o WebDriver
+Você precisará baixar o WebDriver para o navegador que será utilizado nos testes. Você pode encontrá-lo nos seguintes sites:
+
+- **Chrome**: [Chrome WebDriver](https://sites.google.com/a/chromium.org/chromedriver/downloads)
+- **Firefox**: [GeckoDriver](https://github.com/mozilla/geckodriver/releases)
+- **Edge**: [Edge WebDriver](https://developer.microsoft.com/en-us/microsoft-edge/tools/webdriver/)
+- **Safari**: O WebDriver para Safari está incluído no macOS.
+- **Opera**: [Opera WebDriver](https://github.com/operasoftware/operachromiumdriver/releases)
+
+Baixe o WebDriver correspondente à versão do seu navegador e coloque-o em um local acessível no seu sistema. Certifique-se de adicionar o diretório onde o WebDriver está localizado ao seu PATH.
+
 ### Instalar qualquer dependência
 O comando padrão para instalar qualquer dependência Python é:
 ```bash
