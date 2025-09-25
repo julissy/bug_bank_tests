@@ -1,13 +1,14 @@
 *** Settings ***
 Documentation    Essa suite testa a página inicial
 Resource         ../../resources/tela_principal_resources.robot
-Resource    ../../resources/utils_resources.robot
 Test Setup       Abrir o navegador
 Test Teardown    Fechar o navegador
 
 
 *** Test Cases ***
 CT01 - Validar título "O banco com bugs e falhas do seu jeito"
+    [Documentation]    Validar tela inicial com GHERKIN
+    [Tags]    BDD
     DADO que estou na página inicial
     QUANDO visualizar o título
     ENTÃO deve conter o texto 'O banco com bugs e falhas do seu jeito'

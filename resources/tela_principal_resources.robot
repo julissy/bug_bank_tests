@@ -20,4 +20,17 @@ Visualizar a descricão
     Wait Until Element Is Visible    ${DESCRICAO}    10s
 Verificar se conter o texto 'Faça transferências e pagamentos com bugs e pratique testes com sucesso em um cenário quase real!'  
     Element Text Should Be    ${DESCRICAO}    Faça transferências e pagamentos com bugs e pratique testes com sucesso em um cenário quase real!   
+
+# GHERKIN STEPS
+
+DADO que estou na página inicial
+    Go To    url=${URL}
+QUANDO visualizar o título
+    Wait Until Element Is Visible    ${TITULO}    10s
+ENTÃO deve conter o texto 'O banco com bugs e falhas do seu jeito'
+    Element Text Should Be    ${DESCRICAO}    Faça transferências e pagamentos com bugs e pratique testes com sucesso em um cenário quase real!
+QUANDO visualizar a descricão
+    Visualizar a descricão
+ENTÃO deve conter o texto 'Faça transferências e pagamentos com bugs e pratique testes com sucesso em um cenário quase real!'
+    Verificar se conter o texto 'Faça transferências e pagamentos com bugs e pratique testes com sucesso em um cenário quase real!'  
     

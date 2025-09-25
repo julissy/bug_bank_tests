@@ -2,7 +2,7 @@
 Documentation    Essa suite testa a página inicial
 Resource         ../../resources/tela_principal_resources.robot
 Test Setup       Abrir o navegador
-#Test Teardown    Fechar o navegador
+Test Teardown    Fechar o navegador
 
 
 *** Test Cases ***

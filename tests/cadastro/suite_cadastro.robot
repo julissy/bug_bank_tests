@@ -3,7 +3,7 @@ Documentation    Essa suite testa o cadastro
 Resource         ../../resources/cadastro_resources.robot
 Resource         ../../resources/tela_principal_resources.robot
 Test Setup       Abrir o navegador
-#Test Teardown    Fechar o navegador
+Test Teardown    Fechar o navegador
 
 
 *** Test Cases ***

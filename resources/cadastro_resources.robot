@@ -6,11 +6,11 @@ Library     SeleniumLibrary
 *** Variables ***
 ${BTN_REGISTRAR}    xpath://button[text()='Registrar']
 &{PESSOA}    nome=pyladies    email=pyladies@teste.com    senha=12345
-${CAMPO_EMAIL}    //div[@class='card__register']/form/div/input[@name='email']  
-${CAMPO_NOME}    //div[@class='card__register']/form/div/input[@name='name']
-${CAMPO_SENHA}    //div[@class='card__register']/form/div/div/input[@name='password']
-${CAMPO_CONFIRMACAO_SENHA}    //div[@class='card__register']/form/div/div/input[@name='passwordConfirmation']  
-${BTN_CADASTRAR}    //div[@class='card__register']/form/button
+${CAMPO_EMAIL}    (//input[@placeholder='Informe seu e-mail'])[2]
+${CAMPO_NOME}    //input[@placeholder='Informe seu Nome']
+${CAMPO_SENHA}    (//input[@placeholder='Informe sua senha'])[2]
+${CAMPO_CONFIRMACAO_SENHA}    //input[@placeholder='Informe a confirmação da senha']
+${BTN_CADASTRAR}    //button[normalize-space()='Cadastrar']
 ${CARD_SUCESSO}    //p[@id='modalText']
 ${BTN_FECHAR_MODAL}    btnCloseModal     
 
@@ -33,3 +33,13 @@ Clicar no botão "Cadastrar"
 Verificar mensagem de sucesso
     Wait Until Element Is Visible    ${CARD_SUCESSO}
     Click Element    ${BTN_FECHAR_MODAL}
+
+ # PASSOS PARA TESTE DO LOGIN
+ Cadastrar usuário
+     Clicar no botão "Registrar"
+     Preencher campo "e-mail"
+     Preencher campo "nome"
+     Preencher campo "senha"
+     Preencher campo "confirmação de senha"
+     Clicar no botão "Cadastrar"
+     Verificar mensagem de sucesso
