@@ -1,51 +1,53 @@
 # Projeto de Testes Automatizados com Robot Framework
 
-Este projeto consiste em um caso de estudo utilizando o site [Bug Bank](https://bugbank.netlify.app/) para a criação e execução de testes automatizados utilizando o Robot Framework.
+Este projeto foi criado para auxiliar no tutorial QA Experience idealizado pela Pyladies Fortaleza. Ele consiste em um caso de estudo utilizando o site [Bug Bank](https://bugbank.netlify.app/) para a criação e execução de testes automatizados utilizando o Robot Framework.
+
+## Estrutura do Projeto
+
+Os testes estão organizados nas seguintes pastas:
+- resources/: Arquivos de recursos, como variáveis globais e configurações.
+- tests/: Arquivos de testes automatizados.
 
 ## Como utilizar o projeto
 
-### Clonar o projeto
-Para clonar o projeto para sua máquina local, utilize o seguinte comando:
+### 1. Clonar o repositório
 ```bash
 git clone https://github.com/julissy/bug_bank_tests.git
 ```
 
-### Instalar o Python
-Certifique-se de ter o Python instalado. Você pode baixar e instalar o Python em [python.org](https://www.python.org/downloads/).
-
-### Instalar o Robot Framework
-Você pode instalar o Robot Framework usando o pip, o gerenciador de pacotes do Python:
+### 2. Instalar dependências
+Certifique-se de ter o Python instalado ([download aqui](https://www.python.org/downloads/)).
+Instale o Robot Framework e a biblioteca Selenium:
 ```bash
-pip install robotframework
+pip install robotframework robotframework-seleniumlibrary
 ```
 
-### Instalar a Selenium Library
-Para instalar a biblioteca do Selenium para o Robot Framework, utilize o seguinte comando:
+Baixe o WebDriver compatível com o navegador que deseja utilizar:
+- Chrome: [Chrome WebDriver](https://sites.google.com/a/chromium.org/chromedriver/downloads)
+- Firefox: [GeckoDriver](https://github.com/mozilla/geckodriver/releases)
+- Edge: [Edge WebDriver](https://developer.microsoft.com/en-us/microsoft-edge/tools/webdriver/)
+- Safari: WebDriver já incluído no macOS.
+- Opera: [Opera WebDriver](https://github.com/operasoftware/operachromiumdriver/releases)
+Adicione o WebDriver ao PATH do sistema.
+
+### 3. Executar os testes com relatório em diretório
+Para executar todos os testes e gerar o relatório na pasta report, utilize:
 ```bash
-pip install --upgrade robotframework-seleniumlibrary
+robot -d report tests/
 ```
 
-### Baixar o WebDriver
-Você precisará baixar o WebDriver para o navegador que será utilizado nos testes. Você pode encontrá-lo nos seguintes sites:
-
-- **Chrome**: [Chrome WebDriver](https://sites.google.com/a/chromium.org/chromedriver/downloads)
-- **Firefox**: [GeckoDriver](https://github.com/mozilla/geckodriver/releases)
-- **Edge**: [Edge WebDriver](https://developer.microsoft.com/en-us/microsoft-edge/tools/webdriver/)
-- **Safari**: O WebDriver para Safari está incluído no macOS.
-- **Opera**: [Opera WebDriver](https://github.com/operasoftware/operachromiumdriver/releases)
-
-Baixe o WebDriver correspondente à versão do seu navegador e coloque-o em um local acessível no seu sistema. Certifique-se de adicionar o diretório onde o WebDriver está localizado ao seu PATH.
-
-### Instalar qualquer dependência
-O comando padrão para instalar qualquer dependência Python é:
+#### Executar testes por tag
+Para executar testes de uma tag específica (por exemplo, smoke):
 ```bash
-pip install nome-da-dependencia
+robot -d report -i smoke tests/
 ```
 
-## Estrutura do Projeto
-Os testes estão separados em duas pastas:
+#### Executar todos os testes (sem tag)
+```bash
+robot -d report tests/
+```
+O relatório será gerado dentro do diretório report.
 
-1. **resources**: Contém arquivos de recursos, como variáveis globais, arquivos de configuração, etc.
-2. **tests**: Contém os arquivos de teste propriamente ditos.
+---
 
-Os testes foram elaborados com base na análise da aplicação para identificar os pontos críticos que devem ser testados a cada nova implementação de features.
+Qualquer dúvida ou sugestão, fique à vontade para abrir uma issue!
