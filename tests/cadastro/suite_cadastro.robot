@@ -7,9 +7,9 @@ Test Setup       Abrir o navegador
 
 
 *** Test Cases ***
-CT01 - Registrar usuário
+CT01 - Validar cadastro de usuário
     [Documentation]    Esse teste verifica a criação de usuario 
-    ...                com saldo na conta
+    ...                sem saldo na conta
     [Tags]             saldo
     Acessar página inicial
     Clicar no botão "Registrar"
